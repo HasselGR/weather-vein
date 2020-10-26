@@ -1,5 +1,5 @@
 import gulp from 'gulp'
-import { clean, scripts, styles, markup, images, manifest, watch, bundle } from './tasks'
+import { clean, scripts, styles, markup, images, manifest, watch, bundle, _locales } from './tasks'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -19,6 +19,8 @@ export const paths = {
 
   images: 'src/images/**/*',
 
+  _locales: 'src/_locales/**/*',
+
   manifest: 'src/manifest.json',
 
   markup: [
@@ -28,6 +30,6 @@ export const paths = {
 }
 
 
-gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, markup, images, manifest)))
+gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, markup, images, _locales, manifest)))
 gulp.task('dev', gulp.series('build', watch))
 gulp.task('bundle', gulp.series('build', bundle))

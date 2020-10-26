@@ -1,0 +1,38 @@
+{
+  "appName": {
+    "message": "Weather Vein"
+  },
+  "appDesc": {
+    "message": "Dia de playa, o de casa? Revisalo con solo un click!"
+  },
+  "temperature":{
+    "message": "Temperatura"
+  },
+  "weather":{
+    "message": "Clima"
+  },
+  "humidity":{
+    "message": "Humedad"
+  },
+  "weatherParameter":{
+    "message": "Parametro del clima"
+  },
+  "weatherDescription":{
+    "message": "Descripcion"
+  },
+  "temperatureWeather":{
+    "message": "Temperatura"
+  },
+  "minimumTemperature":{
+    "message": "Temperatura Mínima"
+  },
+  "maximumTemperature":{
+    "message": "Temperatura Máxima"
+  },
+  "feelTemperature":{
+    "message": "Temperatura Humana"
+  },
+  "humidityWeather":{
+    "message": "Humedad"
+  }
+}

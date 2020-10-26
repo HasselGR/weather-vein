@@ -1,10 +1,11 @@
 {
-  "name": "Weather Vein",
+  "name": "__MSG_appName__",
   "version": "0.0.0",
   "manifest_version": 2,
-  "description": "Nor Rain nor Storm, check if it will be a sunny day todayç",
+  "description": "__MSG_appDesc__",
   "author": "David Gamboa",
-  "permissions" :["storage", "tabs", "<all_urls>", "activeTab"],
+  "default_locale": "en",
+  "permissions" :["storage", "tabs", "<all_urls>", "activeTab", "alarms"],
   "homepage_url": "https://github.com/HasselGR/weather-vein",
   "icons": {
     "128": "images/icon.png"

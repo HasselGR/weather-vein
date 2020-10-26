@@ -1,0 +1,38 @@
+{
+  "appName": {
+    "message": "Weather Vein"
+  },
+  "appDesc": {
+    "message": "Check out if it's the beach day you anticipated, just with one click!"
+  },
+  "temperature":{
+    "message": "Temperature"
+  },
+  "weather":{
+    "message": "Weather"
+  },
+  "humidity":{
+    "message": "Humidity"
+  },
+  "weatherParameter":{
+    "message": "Parameter"
+  },
+  "weatherDescription":{
+    "message": "Descripction"
+  },
+  "temperatureWeather":{
+    "message": "Temperature"
+  },
+  "minimumTemperature":{
+    "message": "Minimum Temperature"
+  },
+  "maximumTemperature":{
+    "message": "Maximum Temperature"
+  },
+  "feelTemperature":{
+    "message": "Real Feel Temperature"
+  },
+  "humidityWeather":{
+    "message": "Humidity"
+  }
+}

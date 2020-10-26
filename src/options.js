@@ -2,19 +2,21 @@
 import browser from 'webextension-polyfill'
 
 
-let submit = document.getElementById('submit')
+const submit = document.getElementById('submit')
 const select = document.getElementById('country')
 const city = document.getElementById('userinput')
 
-submit.addEventListener('click', function () {
+submit.addEventListener('click', () => {
   if (city.value.length > 0) {
-    var name = select.selectedIndex
-    let request = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value},${select.options.item(name).value}&appid=15d7968a4ea50d6b568a07a54e399358`)
+    const name = select.selectedIndex
+    const request = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value},${select.options.item(name).value}&appid=15d7968a4ea50d6b568a07a54e399358`)
     request.then(response => {
       if (response.status === 200) {
+        const date = new Date()
         console.log('Valid combination')
         response.json()
           .then(data => {
+            console.log("date", date)
             browser.storage.local.set({
               country: select.options.item(name).value,
               city: city.value,
@@ -26,6 +28,7 @@ submit.addEventListener('click', function () {
               max_temperature: data.main.temp_max,
               feel_temperature: data.main.feels_like,
               humidity: data.main.humidity,
+              date: date.toString(),
             })
           })
         browser.runtime.sendMessage({
