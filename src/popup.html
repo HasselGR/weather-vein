@@ -7,20 +7,31 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
+  
   <div class="container">
     <div class="row">
+      <div id = "weather" class ="col-sm">
+        
+      </div>
       <div id = "temperature" class ="col-sm">
         
       </div>
-      <div id = "weather" class ="col-sm">
-        
+      <div id="city" class = "col-sm">
+        <div id ="place">
+
+        </div> 
+        <h4 class ='mt-2 mb-2'>
+          ¿Quieres cambiar de ciudad? Colocala aquí
+        </h4>
+        <input id="userinput" type="text" placeholder="Enter city">
+        <button class="mt-2" id = "submit"> Submit City </button>
       </div>
       <div id ="humidity" class ="col-sm">
         
       </div>
     </div>
   </div>
-  <footer id = "footer">
+  <footer class ="text-center mt-4" id = "footer">
 
   </footer>
 </body>

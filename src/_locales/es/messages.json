@@ -15,10 +15,10 @@
     "message": "Humedad"
   },
   "weatherParameter":{
-    "message": "Parametro del clima"
+    "message": "Parámetro del clima"
   },
   "weatherDescription":{
-    "message": "Descripcion"
+    "message": "Descripción"
   },
   "temperatureWeather":{
     "message": "Temperatura"
