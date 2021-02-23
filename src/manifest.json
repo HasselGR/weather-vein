@@ -14,6 +14,17 @@
     "default_icon": "images/icon.png",
     "default_popup": "popup.html"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
   "options_ui": {
     "chrome_style": true,
     "page": "options.html"

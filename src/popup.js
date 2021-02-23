@@ -2,6 +2,9 @@
 import browser from 'webextension-polyfill'
 
 
+//first we get all the elemets to fill the info up, with the new layout some of them will be not required
+
+
 let location = document.getElementById('city')
 let place = document.getElementById('place')
 let temperature = document.getElementById('temperature')
@@ -11,17 +14,22 @@ let footer = document.getElementById('footer')
 let input = document.getElementById('userinput')
 let button = document.getElementById('submit')
 
-
+//not needed as we wont add something to change cities
 const clearNode = (node) => {
   while (node.firstChild) {
     node.removeChild(node.firstChild)
   }
 }
+
+//pretty self explanatory, it just adds the headline, we do it this way for i18 purposes, you send the size of the header, what its going to say and where it will be attached to
+
+
 const addTitle = (type, string, size = 'h1') => {
   let header = document.createElement(size)
   header.appendChild(document.createTextNode(`${string}`))
   type.appendChild(header)
 }
+//for not so important info. same as before
 
 const addInfo = (type, string, info) => {
   let header = document.createElement('p')
@@ -29,7 +37,7 @@ const addInfo = (type, string, info) => {
   type.appendChild(header)
 }
 
-
+//to add images, we should change this.
 const addImage = (type, string) => {
   let header = document.createElement('img')
   header.setAttribute('width', '150')
@@ -37,7 +45,7 @@ const addImage = (type, string) => {
   header.setAttribute('src', `http://openweathermap.org/img/wn/${string}@2x.png`)
   type.appendChild(header)
 }
-
+//this is the bread and butter, we take the data from the local storage and we add it to the popup.
 const addWeather = () => {
   const city = browser.storage.local.get()
   city.then(data => {
@@ -57,7 +65,7 @@ const addWeather = () => {
     addInfo(footer, 'Last updated since', `${data.date.substr(0, 10)} ${data.date.substr(11, 14)}`)
   }).catch(error => console.log(error))
 }
-
+//method for changing the city, i think this is not needed anymore either
 const changeCity = () => {
   const req = browser.storage.local.get('country')
   req.then(data => {
@@ -94,6 +102,7 @@ const changeCity = () => {
   }).catch(error => console.log(error))
 }
 
+//just in case we change the storage, not needed
 browser.storage.onChanged.addListener(() => {
   clearNode(place)
   clearNode(temperature)
