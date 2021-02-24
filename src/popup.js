@@ -112,7 +112,7 @@ browser.storage.onChanged.addListener(() => {
   addWeather()
 })
 
-button.addEventListener('click', changeCity)
+// button.addEventListener('click', changeCity)
 
 
 addWeather()
