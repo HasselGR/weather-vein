@@ -1,31 +1,119 @@
-html{
-  height:550px;
+$purple-background: rgb(238, 238, 255);
+$purple-text: rgb(151, 107, 255);
+$testing-border: 1px solid red;
+$magenta-text: rgb(31, 0, 71);
+$gray-text: rgb(77, 77, 77);
+html {
   width: 576px;
+  height: 550px;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  display: block;
-  position: absolute;
-}
-body:after{
-  content: "";
-  background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v452-nunoon-01-cloudbackground_2.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=32c4165d73078878433dbd5069b85fcf) no-repeat center center fixed;
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: -1;   
+  background: rgb(254, 255, 255);
+  background: radial-gradient(circle, rgba(254, 255, 255, 1) 12%, rgba(213, 213, 255, 1) 100%);
+  // border: $testing-border;
 }
 
-.margin{
-  margin-left: 150px;
-  margin-right: 150px;
+#logo {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+#cityAndDateContainer {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 35%;
+  > .banner {
+    min-width: 90%;
+    margin-left: -120px;
+    padding: 20px 20px 20px 150px;
+    background: rgb(238, 238, 255);
+    border: 1px solid lightgray;
+    border-radius: 300px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
+
+    > .city {
+      color: $purple-text;
+      font-weight: 900;
+      font-size: 32px;
+    }
+
+    > .date {
+      color: $purple-text;
+      font-weight: lighter;
+      font-size: 28px;
+    }
+  }
+}
+
+#weatherInfoContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 60%;
+  padding: 20px;
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    .weather {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 50%;
+
+      .text {
+        color: $magenta-text;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 0.9;
+      }
+
+      .number {
+        color: $gray-text;
+        font-weight: 100;
+        font-size: 80px;
+      }
+    }
+
+    .humidity {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 50%;
+
+      .text {
+        color: $purple-text;
+        font-weight: bolder;
+        font-size: 30px;
+      }
+
+      .number {
+        color: $gray-text;
+        font-weight: 100;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+    > img {
+      width: 300;
+      height: 300;
+    }
+  }
 }
