@@ -11,9 +11,9 @@
   },
   "scripts": {
     "postinstall": "check-node-version --package",
-    "start": "cross-env NODE_ENV=development gulp dev --require esm",
-    "build": "cross-env NODE_ENV=production gulp build --require esm",
-    "bundle": "cross-env NODE_ENV=production gulp bundle --require esm",
+    "start": "NODE_ENV=development gulp dev --require esm",
+    "build": "NODE_ENV=production gulp build --require esm",
+    "bundle": "NODE_ENV=production gulp bundle --require esm",
     "pretest": "npm run build",
     "test": "ava"
   },
@@ -25,6 +25,7 @@
     "node": ">=8.6"
   },
   "dependencies": {
+    "cryptr": "^6.0.2",
     "lz-string": "^1.4.4",
     "webextension-polyfill": "^0.4.0"
   },

@@ -228,9 +228,9 @@ const addWeather = () => {
     changeText(city, data.city)
     changeText(date, translateDate(data.date))
     changeText(weather, getWeather(data.weather))
-    changeText(imageweather, `<img src="images/assets/${getWeatherImg(data.description)}.png" width="300" />`)
-    changeText(temperature, data.temperature)
-    changeText(humidity, data.humidity)
+    changeText(imageweather, `<img src="images/assets/${getWeatherImg(data.description)}.png" width="250" />`)
+    changeText(temperature, `${Number.parseInt(data.temperature)}°`)
+    changeText(humidity, `${data.humidity}%`)
   }).catch(error => console.log(error))
 }
 

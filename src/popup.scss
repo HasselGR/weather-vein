@@ -3,6 +3,19 @@ $purple-text: rgb(151, 107, 255);
 $testing-border: 1px solid red;
 $magenta-text: rgb(31, 0, 71);
 $gray-text: rgb(77, 77, 77);
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('./fonts/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url('./fonts/Montserrat-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('./fonts/Montserrat-Regular.ttf') format('truetype');
+}
 html {
   width: 576px;
   height: 550px;
@@ -13,9 +26,9 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  font-family: 'Montserrat Regular';
   background: rgb(254, 255, 255);
   background: radial-gradient(circle, rgba(254, 255, 255, 1) 12%, rgba(213, 213, 255, 1) 100%);
-  // border: $testing-border;
 }
 
 #logo {
@@ -30,7 +43,7 @@ body {
   width: 100%;
   height: 35%;
   > .banner {
-    min-width: 90%;
+    min-width: 70%;
     margin-left: -120px;
     padding: 20px 20px 20px 150px;
     background: rgb(238, 238, 255);
@@ -41,7 +54,7 @@ body {
     > .city {
       color: $purple-text;
       font-weight: 900;
-      font-size: 32px;
+      font-size: 40px;
     }
 
     > .date {
@@ -54,41 +67,40 @@ body {
 
 #weatherInfoContainer {
   display: flex;
-  justify-content: space-around;
   width: 100%;
   height: 60%;
-  padding: 20px;
-
+  padding-top: 20px;
   .stats {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
     width: 50%;
+    padding-left: 50px;
     .weather {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      // align-items: center;
       height: 50%;
 
       .text {
         color: $magenta-text;
-        font-weight: bold;
-        font-size: 30px;
+        font-weight: bolder;
+        font-size: 40px;
         line-height: 0.9;
       }
 
       .number {
         color: $gray-text;
-        font-weight: 100;
         font-size: 80px;
+        font-family: 'Montserrat Light';
       }
     }
 
     .humidity {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      // align-items: center;
       height: 50%;
 
       .text {
@@ -100,7 +112,8 @@ body {
       .number {
         color: $gray-text;
         font-weight: 100;
-        font-size: 40px;
+        font-size: 50px;
+        font-family: 'Montserrat Light';
       }
     }
   }
@@ -112,8 +125,7 @@ body {
     width: 50%;
 
     > img {
-      width: 300;
-      height: 300;
+      margin-left: -40px;
     }
   }
 }
