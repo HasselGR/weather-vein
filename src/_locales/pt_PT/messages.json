@@ -3,7 +3,7 @@
     "message": "Clima de Hoy"
   },
   "appDesc": {
-    "message": "Dia de playa, o de casa? Revisalo con solo un click!"
+    "message": "Dia de praia ou em casa? Verifique com apenas um clique!"
   },
   "temperature":{
     "message": "Temperatura"
@@ -12,13 +12,13 @@
     "message": "Clima"
   },
   "humidity":{
-    "message": "Humedad"
+    "message": "Umidade"
   },
   "weatherParameter":{
-    "message": "Parámetro del clima"
+    "message": "Parâmetro climático"
   },
   "weatherDescription":{
-    "message": "Descripción"
+    "message": "Descrição"
   },
   "temperatureWeather":{
     "message": "Temperatura"
@@ -33,6 +33,6 @@
     "message": "Temperatura Humana"
   },
   "humidityWeather":{
-    "message": "Humedad"
+    "message": "Umidade"
   }
 }
