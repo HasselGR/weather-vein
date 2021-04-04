@@ -93,6 +93,7 @@ browser.runtime.onMessage.addListener((request, sender) => {
   }
 })
 
+// eslint-disable-next-line no-unused-vars
 const updater = browser.alarms.create('Hourly Updater', {
   delayInMinutes: 60,
   periodInMinutes: 60,
@@ -131,7 +132,7 @@ browser.alarms.onAlarm.addListener(() => {
 // when you install the extension.
 
 browser.runtime.onInstalled.addListener(function () {
-  fetch('http://api.ipstack.com/check?access_key=46d55efd82cf8067ed7c334ec534bb52') //first we use an API to get the IP location
+  fetch('http://api.ipstack.com/check?access_key=46d55efd82cf8067ed7c334ec534bb52') // First we use an API to get the IP location
     .then((response) => response.json())
     .then((data) => {
       city = data.city // then we get the city and the country code so we are able to fetch the climate for our city.
@@ -142,33 +143,39 @@ browser.runtime.onInstalled.addListener(function () {
       ) // No entiendo porque si dejo de anidar los fetchs no me funciona el scope.
         .then((response) => response.json())
         .then((info) => {
-          //once we get the info we declare it and then we store it on the extension storage
+          // Once we get the info we declare it and then we store it on the extension storage
           // console.log('city', city)
           // console.log('country', country)
           // console.log('weather from ipstack', info)
 
-          //This is for converting the temperature as it comes in kelvin... we modify it first and then we store it.
-          const temperature = parseFloat((info.main.temp - 273).toFixed(2)) //NEEDED, AND NEEDS TO BE AN INT
-          const minimumTemp = parseFloat((info.main.temp_min - 273).toFixed(2)) //not needed
-          const maximumTemp = parseFloat((info.main.temp_max - 273).toFixed(2)) //not needed
-          const feelsTemp = parseFloat((info.main.feels_like - 273).toFixed(2)) //not needed
+          // This is for converting the temperature as it comes in kelvin... we modify it first and then we store it.
+          const temperature = parseFloat((info.main.temp - 273).toFixed(2)) // NEEDED, AND NEEDS TO BE AN INT
+          const minimumTemp = parseFloat((info.main.temp_min - 273).toFixed(2)) // Not needed
+          const maximumTemp = parseFloat((info.main.temp_max - 273).toFixed(2)) // Not needed
+          const feelsTemp = parseFloat((info.main.feels_like - 273).toFixed(2)) // Not needed
           const date = new Date()
           // console.log('date', date)
           browser.storage.local.set({
             // saving the data
             country: country, // needed to locate the weather
             city: city, // NEEDED, goes in the popup
-            weather: info.weather[0].main, //NEEDED
-            icon: info.weather[0].icon, //we will use our own icons so we dont need this
-            description: info.weather[0].description, //not needed
+            weather: info.weather[0].main, // NEEDED
+            icon: info.weather[0].icon, // We will use our own icons so we dont need this
+            description: info.weather[0].description, // Not needed
             temperature: `${temperature}ºC`, // NEEDED
-            min_temperature: `${minimumTemp}ºC`, //not needed
-            max_temperature: `${maximumTemp}ºC`, //not needed
-            feel_temperature: `${feelsTemp}ºC`, //not needed
-            humidity: info.main.humidity, //NEEDED
-            date: date.toString(), //NEEDED
+            min_temperature: `${minimumTemp}ºC`, // Not needed
+            max_temperature: `${maximumTemp}ºC`, // Not needed
+            feel_temperature: `${feelsTemp}ºC`, // Not needed
+            humidity: info.main.humidity, // NEEDED
+            date: date.toString(), // NEEDED
           })
         })
     })
     .catch((error) => console.log(error))
+
+  browser.tabs.create({
+    index: 0,
+    url: 'https://climadehoy.com',
+    active: true,
+  })
 })
