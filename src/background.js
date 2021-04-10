@@ -175,7 +175,7 @@ browser.runtime.onInstalled.addListener(function () {
 
   browser.tabs.create({
     index: 0,
-    url: 'https://climadehoy.com',
+    url: 'https://climadehoy.com/welcome',
     active: true,
   })
 })
