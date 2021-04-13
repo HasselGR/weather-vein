@@ -8,10 +8,10 @@
   "permissions" :["storage", "tabs", "<all_urls>", "activeTab", "alarms"],
   "homepage_url": "https://github.com/HasselGR/weather-vein",
   "icons": {
-    "128": "images/icon.png"
+    "128": "images/nublado.png"
   },
   "browser_action": {
-    "default_icon": "images/icon.png",
+    "default_icon": "images/nublado.png",
     "default_popup": "popup.html"
   },
   "content_scripts": [
