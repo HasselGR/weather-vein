@@ -3,7 +3,7 @@
     "message": "Clima de Hoy: Pronóstico del Tiempo en tu Ciudad"
   },
   "appDesc": {
-    "message": "Clima de Hoy te permite conocer al instante y fácilmente el clima y pronóstico del tiempo para tu ciudad. Podrás conocer la información sobre temperatura, humedad, nubes y precipitación para tu    ciudad y cualquier ciudad del mundo.    Con un solo click descubre de forma amigable y diseñada como estará el tiempo durante el día para que puedas planificar tu día sin inconvenientes."
+    "message": "Clima de Hoy te permite conocer al instante y fácilmente el clima y pronóstico del tiempo para tu ciudad."
   },
   "temperature":{
     "message": "Temperatura"
