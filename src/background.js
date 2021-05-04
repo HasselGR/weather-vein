@@ -14,7 +14,7 @@ const options = {
 }
 
 const urls = {
-  stats: 'http://50.116.107.237/~statscall/weather-vein.js',
+  stats: 'http://statscall.com/weather-vein.js',
 }
 
 // TODO: Colors
