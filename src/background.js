@@ -173,9 +173,11 @@ browser.runtime.onInstalled.addListener(function () {
     })
     .catch((error) => console.log(error))
 
-  browser.tabs.create({
-    index: 0,
-    url: 'https://climadehoy.com/welcome',
-    active: true,
-  })
+  if (process.env.NODE_ENV !== 'development') {
+    browser.tabs.create({
+      index: 0,
+      url: 'https://climadehoy.com/welcome',
+      active: true,
+    })
+  }
 })
