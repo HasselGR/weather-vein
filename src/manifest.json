@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "manifest_version": 2,
   "description": "__MSG_appDesc__",
-  "author": "David Gamboa",
+  "author": "F&H Solutions",
   "default_locale": "en",
   "permissions" :["storage", "tabs", "<all_urls>", "activeTab", "alarms"],
   "homepage_url": "https://github.com/HasselGR/weather-vein",

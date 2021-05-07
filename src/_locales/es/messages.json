@@ -3,36 +3,36 @@
     "message": "Clima de Hoy: Pronóstico del Tiempo en tu Ciudad"
   },
   "appDesc": {
-    "message": "Clima de Hoy te permite conocer al instante y fácilmente el clima y pronóstico del tiempo para tu ciudad."
+    "message": "Podrás conocer la información sobre temperatura, humedad, nubes y precipitación para tu ciudad y cualquier ciudad del mundo."
   },
-  "temperature":{
+  "temperature": {
     "message": "Temperatura"
   },
-  "weather":{
+  "weather": {
     "message": "Clima"
   },
-  "humidity":{
+  "humidity": {
     "message": "Humedad"
   },
-  "weatherParameter":{
+  "weatherParameter": {
     "message": "Parámetro del clima"
   },
-  "weatherDescription":{
+  "weatherDescription": {
     "message": "Descripción"
   },
-  "temperatureWeather":{
+  "temperatureWeather": {
     "message": "Temperatura"
   },
-  "minimumTemperature":{
+  "minimumTemperature": {
     "message": "Temperatura Mínima"
   },
-  "maximumTemperature":{
+  "maximumTemperature": {
     "message": "Temperatura Máxima"
   },
-  "feelTemperature":{
+  "feelTemperature": {
     "message": "Temperatura Humana"
   },
-  "humidityWeather":{
+  "humidityWeather": {
     "message": "Humedad"
   }
 }

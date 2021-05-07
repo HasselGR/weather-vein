@@ -1,38 +1,38 @@
 {
   "appName": {
-    "message": "Clima de Hoy"
+    "message": "Clima de Hoy: Weather Forecast in your City"
   },
   "appDesc": {
-    "message": "Check out if it's the beach day you anticipated, just with one click!"
+    "message": "You will be able to know the information on temperature, humidity, clouds and precipitation for your city and any city in the world."
   },
-  "temperature":{
+  "temperature": {
     "message": "Temperature"
   },
-  "weather":{
+  "weather": {
     "message": "Weather"
   },
-  "humidity":{
+  "humidity": {
     "message": "Humidity"
   },
-  "weatherParameter":{
+  "weatherParameter": {
     "message": "Parameter"
   },
-  "weatherDescription":{
+  "weatherDescription": {
     "message": "Descripction"
   },
-  "temperatureWeather":{
+  "temperatureWeather": {
     "message": "Temperature"
   },
-  "minimumTemperature":{
+  "minimumTemperature": {
     "message": "Minimum Temperature"
   },
-  "maximumTemperature":{
+  "maximumTemperature": {
     "message": "Maximum Temperature"
   },
-  "feelTemperature":{
+  "feelTemperature": {
     "message": "Real Feel Temperature"
   },
-  "humidityWeather":{
+  "humidityWeather": {
     "message": "Humidity"
   }
 }

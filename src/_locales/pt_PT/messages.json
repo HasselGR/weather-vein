@@ -1,38 +1,38 @@
 {
   "appName": {
-    "message": "Clima de Hoy"
+    "message": "Clima de hoy: Previsão do tempo na sua cidade"
   },
   "appDesc": {
-    "message": "Dia de praia ou em casa? Verifique com apenas um clique!"
+    "message": "Você poderá saber as informações de temperatura, umidade, nuvens e precipitação para sua cidade e para qualquer cidade do mundo."
   },
-  "temperature":{
+  "temperature": {
     "message": "Temperatura"
   },
-  "weather":{
+  "weather": {
     "message": "Clima"
   },
-  "humidity":{
+  "humidity": {
     "message": "Umidade"
   },
-  "weatherParameter":{
+  "weatherParameter": {
     "message": "Parâmetro climático"
   },
-  "weatherDescription":{
+  "weatherDescription": {
     "message": "Descrição"
   },
-  "temperatureWeather":{
+  "temperatureWeather": {
     "message": "Temperatura"
   },
-  "minimumTemperature":{
+  "minimumTemperature": {
     "message": "Temperatura Mínima"
   },
-  "maximumTemperature":{
+  "maximumTemperature": {
     "message": "Temperatura Máxima"
   },
-  "feelTemperature":{
+  "feelTemperature": {
     "message": "Temperatura Humana"
   },
-  "humidityWeather":{
+  "humidityWeather": {
     "message": "Umidade"
   }
 }
